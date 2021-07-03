@@ -1,0 +1,149 @@
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.name {
+  margin: 40px 0px;
+}
+
+.name h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.photo {
+  margin: 50px 0px;
+}
+
+/* === 共用 === */
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.ch-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.en-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #A00404;
+}
+/* ====== */
+
+.profile {
+  margin-bottom: 56px;
+}
+
+.profile .content {
+  font-size:24px;
+  line-height: 36px;
+  margin-bottom: 24px;
+}
+
+.education-content p {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.skills {
+  margin-top: 48px;
+  margin-bottom: 56px;
+  text-align: center;
+  background-color: #415165;
+}
+
+.skills * {
+  color: #FFF;
+}
+
+.skills .title {
+  justify-content: center;
+  padding: 24px 10px 0px;
+}
+
+.skills .list {
+  width: 250px;
+  margin: 0 auto;
+  padding: 20px 0px 32px 24px;
+  text-align: left;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.skills .list ul {
+  border-left: 1px solid #FFF;
+  padding-left: 24px;
+}
+
+.skills .list li {
+  margin: 20px 0px;
+}
+
+.exp {
+  margin-bottom: 56px;
+}
+
+.exp .content li {
+  margin-bottom: 32px;
+}
+
+.exp .content img {
+  margin: 8px 0px;
+}
+
+.exp .content {
+  border-left: 1px solid #AFBDD2;
+  margin-left: 20px;
+}
+
+.exp .content ul {
+  padding-left: 20px;
+}
+
+.exp .content .description {
+  width: 642px;
+  line-height: 30px;
+  margin-top: 8px;
+}
+
+.exp .content h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  background-color: #415165;
+  color: #FFF;
+}
+
+.footer .contact {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.contact .title {
+  justify-content: center;
+  padding: 24px 10px 0px;
+}
+
+.contact .en-title {
+  color: #FFF;
+}
+
+.contact ul {
+  padding: 20px;
+}
+
+.contact li {
+  margin-bottom: 16px;
+}
+
+.contact li a {
+  padding: 0px 12px;
+}
