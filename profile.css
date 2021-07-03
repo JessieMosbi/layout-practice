@@ -1,58 +1,88 @@
-.container {
-  width: 1000px;
-  margin: 0 auto;
+*, *:before, *:after {
+	box-sizing: border-box;
 }
 
-.name {
-  margin: 40px 0px;
-}
-
-.name h1 {
-  font-size: 80px;
-  margin-bottom: 20px;
-}
-
-.photo {
-  margin: 50px 0px;
+body {
+  font-family: Arial, PingFang, "Microsoft JhengHei", sans-serif;
 }
 
 /* === 共用 === */
 .title {
   display: flex;
   align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 16px;
 }
 
 .ch-title {
-  font-size: 32px;
   font-weight: bold;
   margin-right: 16px;
 }
 
 .en-title {
-  font-size: 24px;
   font-weight: bold;
   color: #A00404;
 }
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
 /* ====== */
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.name {
+  margin-top: 37px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #000;
+}
+
+.name h1 span {
+  display: inline-block;
+  margin: 13px 0px;
+}
+
+.photo {
+  margin: 48px 0px;
+}
+
 .profile {
-  margin-bottom: 56px;
+  margin-bottom: 72px;
 }
 
 .profile .content {
-  font-size:24px;
-  line-height: 36px;
+  margin-bottom: 48px;
+}
+
+.profile .content p {
+  font-size: 24px;
+  line-height: 36px; /* 要用倍數好，還是 px？ */
   margin-bottom: 24px;
 }
 
-.education-content p {
+.education {
+  margin-bottom: 72px;
+}
+
+.education .content li {
   font-size: 24px;
   margin-bottom: 24px;
 }
 
 .skills {
-  margin-top: 48px;
-  margin-bottom: 56px;
+  margin-bottom: 72px;
   text-align: center;
   background-color: #415165;
 }
@@ -63,33 +93,38 @@
 
 .skills .title {
   justify-content: center;
-  padding: 24px 10px 0px;
+  padding: 24px 0px 8px 0px;
+  border: 1px solid #FFF;
 }
 
-.skills .list {
-  width: 250px;
-  margin: 0 auto;
-  padding: 20px 0px 32px 24px;
-  text-align: left;
-  font-size: 24px;
-  line-height: 36px;
+.skills .content {
+  display: flex;
+  justify-content: center;
+  margin: 21px auto 0px auto;
 }
 
-.skills .list ul {
+.skills .content ul {
   border-left: 1px solid #FFF;
   padding-left: 24px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-.skills .list li {
-  margin: 20px 0px;
+.skills .content li {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.skills .content li:last-child {
+  padding-top: 3px; /* 不能 margin，會抵銷 */
 }
 
 .exp {
-  margin-bottom: 56px;
+  margin-bottom: 72px;
 }
 
 .exp .content li {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .exp .content img {
@@ -97,18 +132,17 @@
 }
 
 .exp .content {
-  border-left: 1px solid #AFBDD2;
-  margin-left: 20px;
+  margin-left: 24px;
 }
 
 .exp .content ul {
-  padding-left: 20px;
+  border-left: 1px solid #AFBDD2;
+  padding-left: 24px;
 }
 
 .exp .content .description {
   width: 642px;
   line-height: 30px;
-  margin-top: 8px;
 }
 
 .exp .content h3 {
@@ -123,27 +157,36 @@
 }
 
 .footer .contact {
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto;
+}
+
+.contact {
+  padding-bottom: 36px;
+}
+
+.contact * {
+  color: #FFF;
 }
 
 .contact .title {
   justify-content: center;
-  padding: 24px 10px 0px;
-}
-
-.contact .en-title {
-  color: #FFF;
-}
-
-.contact ul {
-  padding: 20px;
+  padding: 24px 0px 8px 0px;
+  border-bottom: 1px solid #FFF;
 }
 
 .contact li {
-  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
-.contact li a {
-  padding: 0px 12px;
+.contact li:nth-child(3) {
+  margin-top: 13px;
+}
+
+.contact li:nth-child(4) {
+  margin-top: 15px;
+}
+
+.contact li:nth-child(5) a {
+  margin: 0px 12px;
 }
