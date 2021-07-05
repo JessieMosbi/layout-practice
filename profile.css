@@ -156,11 +156,6 @@ h3 {
   color: #FFF;
 }
 
-.footer .contact {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .contact {
   padding-bottom: 36px;
 }
@@ -175,6 +170,10 @@ h3 {
   border-bottom: 1px solid #FFF;
 }
 
+.contact .text {
+  margin-top: 32px; /* 跟上面的 .title margin-bottom: 16px 會取大的 32 */
+}
+
 .contact li {
   margin-top: 16px;
 }
@@ -187,6 +186,11 @@ h3 {
   margin-top: 15px;
 }
 
-.contact li:nth-child(5) a {
+.contact .image {
+  margin-top: 16px;
+}
+
+.contact .image li {
+  display: inline-block;
   margin: 0px 12px;
 }
