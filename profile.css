@@ -100,13 +100,13 @@ h3 {
 .skills .content {
   display: flex;
   justify-content: center;
-  margin: 21px auto 0px auto;
+  margin: 37px auto 0px auto;
 }
 
 .skills .content ul {
   border-left: 1px solid #FFF;
   padding-left: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
   text-align: left;
 }
 
