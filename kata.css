@@ -1,0 +1,57 @@
+img {
+  display: block; /* 消除 img 底下多餘的空白 */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.news-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.news-title {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.news-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer {
+  font-size: 16px;
+  line-height: 1.5; /* 24px */
+  padding-top: 48px; /* (120-24)/2 */
+  padding-bottom: 48px;
+  text-align: center;
+  background: gray;
+}
