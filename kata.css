@@ -11,12 +11,11 @@ body {
   width: 640px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
 }
 
 .content {
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .news-list {
@@ -27,13 +26,11 @@ body {
 
 .news {
   display: flex;
-  margin-bottom: 24px;
 }
 
 .news-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin: 0 20px;
 }
 
@@ -47,11 +44,10 @@ body {
   line-height: 1.5;
 }
 
-.footer {
+.footer p {
   font-size: 16px;
   line-height: 1.5; /* 24px */
-  padding-top: 48px; /* (120-24)/2 */
-  padding-bottom: 48px;
+  padding: 48px 0;  /* (120-24)/2 */
   text-align: center;
   background: gray;
 }
