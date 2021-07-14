@@ -1,16 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700;1,900&display=swap');
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
-  font-style: italic; /* 斜體 */
-  font-weight: bold;
+  line-height: 1.5;
 }
 
-h1 {
+img {
+  display: block;
+}
+
+/* TODO: 推擠方向一致，僅限於 margin-上下嗎？因為 margin-左右 跟 padding 其實都會用到，不太能單獨只用一邊耶 */
+
+/* TODO: 雖然說 px 跟 rem 不要混用，但像 80 無法被 24 整除要怎麼辦？ */
+.h1 {
   font-size: 80px;
+  line-height: 106px;
 }
 
-h2 {
+.h2 {
   font-size: 64px;
+  line-height: 84px;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.bg-primary {
+  background: #000;
+  color: #FFF;
 }
 
 /* FIXME: 1200 應該可以寫成 .content 給每個 div 用 */
@@ -34,23 +54,19 @@ h2 {
   color: #FFF;
 }
 
-.brief-text span {
+/* TODO: span 為什麼要設成 inline-block 或是 block，才能設定 line-height，否則設了會不準？ */
+.brief-content span {
   display: inline-block; /* 為了設 line-height */
   line-height: 32px;
 }
 
-.brief-text p {
+.brief-content p {
   /* TODO: 如果不是在 html 用 br，而是直接設 width 讓多的部分到下一行去，建議這樣做嗎？ */
   width: 283px;
   margin-top: 32px;
-  margin-bottom: 40px;
-  line-height: 36px;
 }
 
-.brief-name {
-  line-height: 106px;
-}
-
+/* TODO: 這樣的 class 命名方式好嗎？上一層＋「-」作為開頭 */
 .brief-media-link {
   display: flex;
   margin-top: 40px;
@@ -62,41 +78,39 @@ h2 {
 
 /* === about === */
 .about {
-  margin: 0 auto;
   margin-top: 56px;
   text-align: center;
 }
 
-.about-text img {
+.about-content img {
   display: block;
-  margin: 0 auto;
-}
-
-.about-text h2 {
-  line-height: 84px;
-  margin-bottom: 40px;
+  margin: 40px auto 0 auto;
 }
 
 .about-info {
   margin-top: 20px;
-  padding-bottom: 24px;
+}
+
+/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
+.about-info-name, .about-info-birth {
+  line-height: 32px;
 }
 
 .about-info-birth {
   margin-top: 4px;
-  margin-bottom: 8px;
 }
 
 .about-info-school {
-  line-height: 36px;
+  margin-top: 8px;
 }
 
 .about-jobs {
   width: 384px;
-  margin: 0 auto;
+  margin: 24px auto 0 auto;
   border-top: 1px solid #000;
 }
 
+/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .about-jobs li {
   margin-top: 28px;
   line-height: 32px;
@@ -116,86 +130,72 @@ h2 {
 
 /* === Brand === */
 .brand {
-  background: #000;
-  color: #FFF;
-}
-
-.brand {
   margin-top: 56px;
   padding-top: 56px;
   padding-bottom: 160px;
 }
 
-.brand-text {
+.brand-content {
   margin: 0 auto;
   text-align: center;
 }
 
-.brand-text h2 {
-  margin-bottom: 12px;
-  line-height: 84px;
-}
-
+/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .brand-slogan {
-  font-size: 24px;
   line-height: 32px;
-  margin-bottom: 32px;
+  margin-top: 12px;
 }
 
-.brand-des {
+/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
+.brand-description {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 68px;
+  margin-top: 32px;
 }
 
 .brand-imges {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 68px;
 }
 
 .brand-main-img {
   margin: 0 auto;
 }
 
-.brand-imges li {
-  margin-bottom: 40px;
+.brand-imges li:not(.brand-main-img) {
+  margin-top: 40px;
 }
 
 /* === works === */
 .works {
   padding-top: 56px;
-  padding-bottom: 96px;
 }
 
-.works-text {
+.works-content {
   margin: 0 auto;
   text-align: center;
 }
 
-.works h2 {
-  line-height: 84px;
-}
-
 .works-description {
   margin-top: 16px;
-  margin-bottom: 56px;
-  font-size: 20px;
-  line-height: 30px;
 }
 
+/* TODO: works-list 藉由 48+8 總共推 56，這樣寫法好嗎？或是可以怎樣改進呢（要符合推擠方向一致的話） */
 .works-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 8px;
+}
+
+.works-list li {
+  margin-top: 48px;
 }
 
 .work-name {
   margin-top: 16px;
-  margin-bottom: 48px;
   text-align: center;
   font-size: 20px;
   line-height: 28px;
@@ -204,19 +204,18 @@ h2 {
 }
 
 /* === contact === */
-.contact h2 {
-  line-height: 84px;
-}
-
 .contact {
+  margin-top: 144px;
   padding-top: 64px;
   padding-bottom: 64px;
   text-align: center;
-  background: #000;
-  color: #FFF;
+}
+
+.contact-info {
+  margin-top: 16px;
 }
 
 .contact-info li {
-  margin-top: 16px;
+  margin-top: 16px; /* 取大的，但跟外層 16 一樣 */
   line-height: 33px;
 }
