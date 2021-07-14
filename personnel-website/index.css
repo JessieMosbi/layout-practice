@@ -1,17 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700;1,900&display=swap');
 
+
+/* === global setting === */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   line-height: 1.5;
+  text-align: center;
 }
 
 img {
   display: block;
 }
 
-/* TODO: 推擠方向一致，僅限於 margin-上下嗎？因為 margin-左右 跟 padding 其實都會用到，不太能單獨只用一邊耶 */
+.description {
+  font-size: 20px;
+  line-height: 30px;
+}
 
+.bg-primary {
+  background: #000;
+}
+
+.text-white {
+  color: #FFF;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* === utility setting === */
+/* TODO: 推擠方向一致，僅限於 margin-上下嗎？因為 margin-左右 跟 padding 其實都會用到，不太能單獨只用一邊 */
 /* TODO: 雖然說 px 跟 rem 不要混用，但像 80 無法被 24 整除要怎麼辦？ */
 .h1 {
   font-size: 80px;
@@ -23,23 +45,29 @@ img {
   line-height: 84px;
 }
 
-.description {
-  font-size: 20px;
-  line-height: 30px;
+/* TODO: 原本想要以 4 為單位，但發現有好幾個都只用一次，所以最後推 8，並把使用 2 次以上的統整起來，其餘各別在 class 內推，這樣好嗎？還是要統一，即便只有使用一次也要寫成 utility？ */
+.mt-1 {
+  margin-top: 8px;
 }
 
-.bg-primary {
-  background: #000;
-  color: #FFF;
+.mt-2 {
+  margin-top: 16px;
 }
 
-/* FIXME: 1200 應該可以寫成 .content 給每個 div 用 */
-/* 整理成工具式 class */
-.content {
-  width: 1200px;
+.mt-3 {
+  margin-top: 32px;
 }
 
-/* === brief === */
+.mt-4 {
+  margin-top: 40px;
+}
+
+.mt-5 {
+  margin-top: 56px;
+}
+
+
+/* === brief block === */
 .brief {
   background: url("https://hexschool.github.io/webLayoutTraining1st/week2/banner.png") center center;
   background-size: cover;
@@ -50,46 +78,43 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  color: #FFF;
+  text-align: left;
 }
 
+/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 /* TODO: span 為什麼要設成 inline-block 或是 block，才能設定 line-height，否則設了會不準？ */
+/* TODO: 我知道 inline 元素本身不能設定高、寬，但 lh 也無效的原因，跟 lh 背後其實是 line-box 在撐高度有關係嗎？ */
 .brief-content span {
   display: inline-block; /* 為了設 line-height */
   line-height: 32px;
 }
 
+/* TODO: 如果不是在 html 用 br，而是直接設 width 讓多的部分到下一行去，建議這樣做嗎？ */
 .brief-content p {
-  /* TODO: 如果不是在 html 用 br，而是直接設 width 讓多的部分到下一行去，建議這樣做嗎？ */
   width: 283px;
-  margin-top: 32px;
 }
 
 /* TODO: 這樣的 class 命名方式好嗎？上一層＋「-」作為開頭 */
 .brief-media-link {
   display: flex;
-  margin-top: 40px;
 }
 
 .brief-media-link li {
   margin: 0 8px;
 }
 
-/* === about === */
-.about {
-  margin-top: 56px;
-  text-align: center;
-}
 
-.about-content img {
+/* === about block === */
+.about img {
   display: block;
-  margin: 40px auto 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-info {
   margin-top: 20px;
 }
+
 
 /* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .about-info-name, .about-info-birth {
@@ -98,10 +123,6 @@ img {
 
 .about-info-birth {
   margin-top: 4px;
-}
-
-.about-info-school {
-  margin-top: 8px;
 }
 
 .about-jobs {
@@ -116,7 +137,7 @@ img {
   line-height: 32px;
 }
 
-/* FIXME: 自訂義 list style，不太能對齊欸（文字垂直置中，現在有點偏下） */
+/* TODO: 自訂義 list style，不太能對齊（文字垂直置中，現在有點偏下），試了好久都解不掉，不知道助教能不能給一點方向...？ */
 .about-jobs li::before {
   content: "";
   display: inline-block;
@@ -128,29 +149,17 @@ img {
   margin-right: 16px;
 }
 
-/* === Brand === */
+
+/* === brand block === */
 .brand {
-  margin-top: 56px;
   padding-top: 56px;
   padding-bottom: 160px;
-}
-
-.brand-content {
-  margin: 0 auto;
-  text-align: center;
 }
 
 /* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .brand-slogan {
   line-height: 32px;
   margin-top: 12px;
-}
-
-/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
-.brand-description {
-  font-style: normal;
-  font-weight: normal;
-  margin-top: 32px;
 }
 
 .brand-imges {
@@ -160,26 +169,15 @@ img {
   margin-top: 68px;
 }
 
+/* TODO: 不知道有沒有更好的方式，讓第一張圖置中呢？ */
 .brand-main-img {
   margin: 0 auto;
 }
 
-.brand-imges li:not(.brand-main-img) {
-  margin-top: 40px;
-}
 
-/* === works === */
+/* === works block === */
 .works {
   padding-top: 56px;
-}
-
-.works-content {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.works-description {
-  margin-top: 16px;
 }
 
 /* TODO: works-list 藉由 48+8 總共推 56，這樣寫法好嗎？或是可以怎樣改進呢（要符合推擠方向一致的話） */
@@ -187,7 +185,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 8px;
 }
 
 .works-list li {
@@ -195,27 +192,19 @@ img {
 }
 
 .work-name {
-  margin-top: 16px;
-  text-align: center;
   font-size: 20px;
   line-height: 28px;
-  font-weight: normal;
-  font-style: normal;
 }
 
-/* === contact === */
+
+/* === contact block === */
 .contact {
   margin-top: 144px;
   padding-top: 64px;
   padding-bottom: 64px;
-  text-align: center;
 }
 
-.contact-info {
-  margin-top: 16px;
-}
-
+/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .contact-info li {
-  margin-top: 16px; /* 取大的，但跟外層 16 一樣 */
   line-height: 33px;
 }
