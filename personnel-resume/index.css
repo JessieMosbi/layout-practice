@@ -122,7 +122,7 @@ img {
 }
 
 .skills .content ul {
-  width: 250px; /* TODO: 若按照 XD 上的 192px 會導致超過換行，為什麼？這樣大概設一個不會換行的 250px 可以嗎？因為一定要設 width 我才能夠用 margin: 0 auto; */
+  width: 250px;
   margin: 0 auto;
   margin-top: 37px;
   border-left: 1px solid #FFF;
