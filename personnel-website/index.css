@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700;1,900&display=swap');
+
+
+/* === global setting === */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+img {
+  display: block;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.bg-primary {
+  background: #000;
+}
+
+.text-white {
+  color: #FFF;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* === utility setting === */
+/* TODO: 推擠方向一致，僅限於 margin-上下嗎？因為 margin-左右 跟 padding 其實都會用到，不太能單獨只用一邊 */
+.h1 {
+  font-size: 80px;
+  line-height: 106px;
+}
+
+.h2 {
+  font-size: 64px;
+  line-height: 84px;
+}
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mt-3 {
+  margin-top: 32px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+.mt-5 {
+  margin-top: 56px;
+}
+
+
+/* === brief block === */
+.brief {
+  background: url("https://hexschool.github.io/webLayoutTraining1st/week2/banner.png") center center;
+  background-size: cover;
+  width: calc(100vw);
+  height: 958px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.h1 span {
+  display: inline-block; /* 為了設 line-height */
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.brief-box p {
+  width: 283px;
+}
+
+.brief-media-link {
+  display: flex;
+}
+
+.brief-media-link li {
+  margin: 0 8px;
+}
+
+
+/* === about block === */
+.avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-info {
+  margin-top: 20px;
+}
+
+
+.about-info-name, .about-info-birth {
+  line-height: 32px;
+}
+
+.about-info-birth {
+  margin-top: 4px;
+}
+
+.about-jobs {
+  width: 384px;
+  margin: 24px auto 0 auto;
+  border-top: 1px solid #000;
+}
+
+.about-jobs li {
+  margin-top: 28px;
+  line-height: 32px;
+  /* 讓自訂義 list style 與文字均垂直置中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-jobs li::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  /* vertical-align: middle; 指定行内元素（inline）或 table-cell 元素的垂直對齊方式 */
+  background-color: #891818;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+
+/* === brand block === */
+.brand {
+  padding-top: 56px;
+  padding-bottom: 160px;
+}
+
+.brand-slogan {
+  line-height: 32px;
+  margin-top: 12px;
+}
+
+.brand-imges {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 68px;
+}
+
+/* TODO: 不知道有沒有更好的方式，讓第一張圖置中呢？ */
+.brand-main-img {
+  margin: 0 auto;
+}
+
+
+/* === works block === */
+.works {
+  padding-top: 56px;
+}
+
+/* works-list 藉由 48+8 總共推 56 */
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.works-list li {
+  margin-top: 48px;
+}
+
+.work-name {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+
+/* === contact block === */
+.contact {
+  margin-top: 144px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.contact-info li {
+  line-height: 33px;
+}
+
+.contact-info a {
+  text-decoration: none;
+}
