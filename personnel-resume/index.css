@@ -4,123 +4,144 @@
 
 body {
   font-family: Arial, PingFang, "Microsoft JhengHei", sans-serif;
+  line-height: 1.5;
+  font-size: 24px;
 }
 
-/* === 共用 === */
+img {
+  display: block;
+}
+
 .title {
-  display: flex;
-  align-items: center;
   padding-bottom: 8px;
   border-bottom: 1px solid #000;
   margin-bottom: 16px;
-}
-
-.ch-title {
-  font-weight: bold;
   margin-right: 16px;
 }
 
-.en-title {
-  font-weight: bold;
+.title span {
   color: #A00404;
+  margin-left: 16px;
 }
 
-h1 {
+.description {
+  font-size: 20px;
+}
+
+
+/* === Utility === */
+.h1 {
   font-size: 80px;
+  line-height: 106px;
 }
 
-h2 {
+.h2 {
   font-size: 32px;
 }
 
-h3 {
-  font-size: 24px;
+.bg-primary {
+  background-color: #415165;
 }
-/* ====== */
+
+.text-white {
+  color: #FFF;
+}
 
 .container {
   width: 1200px;
   margin: 0 auto;
 }
 
+
+/* === name === */
 .name {
   margin-top: 37px;
   padding-bottom: 3px;
   border-bottom: 1px solid #000;
 }
 
-.name h1 span {
-  display: inline-block;
-  margin: 13px 0px;
-}
 
+/* === photo === */
 .photo {
-  margin: 48px 0px;
+  margin-top: 48px;
 }
 
+
+/* === profile === */
 .profile {
-  margin-bottom: 72px;
+  margin-top: 48px;
 }
 
 .profile .content {
-  margin-bottom: 48px;
+  margin-top: 16px;
 }
 
-.profile .content p {
-  font-size: 24px;
-  line-height: 36px; /* 要用倍數好，還是 px？ */
-  margin-bottom: 24px;
+.about-job {
+  margin-top: 24px;
 }
 
+
+/* === education === */
 .education {
-  margin-bottom: 72px;
+  margin-top: 72px;
+}
+
+.education .content {
+  margin-top: 16px;
 }
 
 .education .content li {
-  font-size: 24px;
-  margin-bottom: 24px;
+  margin-top: 24px;
 }
 
+
+/* === skills === */
 .skills {
-  margin-bottom: 72px;
+  margin-top: 72px;
+  padding-bottom: 36px;
   text-align: center;
-  background-color: #415165;
-}
-
-.skills * {
-  color: #FFF;
 }
 
 .skills .title {
-  justify-content: center;
+  width: 992px;
+  margin: 0 auto;
   padding: 24px 0px 8px 0px;
-  border: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+.skills .title .h2 {
+  margin: 0 auto;
+}
+
+.skills .title span {
+  color: #FFF;
 }
 
 .skills .content {
-  display: flex;
-  justify-content: center;
-  margin: 37px auto 0px auto;
+  margin: 0 auto;
 }
 
 .skills .content ul {
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 37px;
   border-left: 1px solid #FFF;
-  padding-left: 24px;
-  margin-bottom: 36px;
   text-align: left;
 }
 
 .skills .content li {
+  padding-left: 24px;
   margin-bottom: 16px;
-  font-size: 24px;
 }
 
 .skills .content li:last-child {
   padding-top: 3px; /* 不能 margin，會抵銷 */
 }
 
+
+/* === exp === */
 .exp {
-  margin-bottom: 72px;
+  margin-top: 76px;
 }
 
 .exp .content li {
@@ -142,36 +163,29 @@ h3 {
 
 .exp .content .description {
   width: 642px;
-  line-height: 30px;
 }
 
-.exp .content h3 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
+/* === contact === */
 .footer {
-  text-align: center;
-  background-color: #415165;
-  color: #FFF;
+  margin-top: 72px;
 }
 
 .contact {
+  text-align: center;
   padding-bottom: 36px;
 }
 
-.contact * {
-  color: #FFF;
-}
-
 .contact .title {
-  justify-content: center;
   padding: 24px 0px 8px 0px;
   border-bottom: 1px solid #FFF;
 }
 
+.contact .title span {
+  color: #FFF;
+}
+
 .contact .text {
-  margin-top: 32px; /* 跟上面的 .title margin-bottom: 16px 會取大的 32 */
+  margin-top: 32px;
 }
 
 .contact li {
@@ -193,4 +207,14 @@ h3 {
 .contact .image li {
   display: inline-block;
   margin: 0px 12px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.contact a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
