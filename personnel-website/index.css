@@ -79,7 +79,6 @@ img {
   text-align: left;
 }
 
-/* TODO: 我知道 inline 元素本身不能設定高、寬，但 lh 也無效的原因，跟 lh 背後其實是 line-box 在撐高度有關係嗎？ */
 .h1 span {
   display: inline-block; /* 為了設 line-height */
   font-size: 24px;
@@ -111,7 +110,6 @@ img {
 }
 
 
-/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .about-info-name, .about-info-birth {
   line-height: 32px;
 }
@@ -126,7 +124,6 @@ img {
   border-top: 1px solid #000;
 }
 
-/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .about-jobs li {
   margin-top: 28px;
   line-height: 32px;
@@ -154,7 +151,6 @@ img {
   padding-bottom: 160px;
 }
 
-/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .brand-slogan {
   line-height: 32px;
   margin-top: 12px;
@@ -202,7 +198,6 @@ img {
   padding-bottom: 64px;
 }
 
-/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
 .contact-info li {
   line-height: 33px;
 }
