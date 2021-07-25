@@ -34,7 +34,6 @@ img {
 
 /* === utility setting === */
 /* TODO: 推擠方向一致，僅限於 margin-上下嗎？因為 margin-左右 跟 padding 其實都會用到，不太能單獨只用一邊 */
-/* TODO: 雖然說 px 跟 rem 不要混用，但像 80 無法被 24 整除要怎麼辦？ */
 .h1 {
   font-size: 80px;
   line-height: 106px;
@@ -45,7 +44,6 @@ img {
   line-height: 84px;
 }
 
-/* TODO: 原本想要以 4 為單位，但發現有好幾個都只用一次，所以最後推 8，並把使用 2 次以上的統整起來，其餘各別在 class 內推，這樣好嗎？還是要統一，即便只有使用一次也要寫成 utility？ */
 .mt-1 {
   margin-top: 8px;
 }
@@ -72,7 +70,7 @@ img {
   background: url("https://hexschool.github.io/webLayoutTraining1st/week2/banner.png") center center;
   background-size: cover;
   width: calc(100vw);
-  height: calc(100vh);
+  height: 958px;
 
   display: flex;
   flex-direction: column;
@@ -81,20 +79,17 @@ img {
   text-align: left;
 }
 
-/* TODO: 這個是設計稿錯誤，還是真的要特別設 lh 呢？ */
-/* TODO: span 為什麼要設成 inline-block 或是 block，才能設定 line-height，否則設了會不準？ */
 /* TODO: 我知道 inline 元素本身不能設定高、寬，但 lh 也無效的原因，跟 lh 背後其實是 line-box 在撐高度有關係嗎？ */
-.brief-content span {
+.h1 span {
   display: inline-block; /* 為了設 line-height */
+  font-size: 24px;
   line-height: 32px;
 }
 
-/* TODO: 如果不是在 html 用 br，而是直接設 width 讓多的部分到下一行去，建議這樣做嗎？ */
 .brief-content p {
   width: 283px;
 }
 
-/* TODO: 這樣的 class 命名方式好嗎？上一層＋「-」作為開頭 */
 .brief-media-link {
   display: flex;
 }
@@ -135,15 +130,18 @@ img {
 .about-jobs li {
   margin-top: 28px;
   line-height: 32px;
+  /* 讓自訂義 list style 與文字均垂直置中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* TODO: 自訂義 list style，不太能對齊（文字垂直置中，現在有點偏下），試了好久都解不掉，不知道助教能不能給一點方向...？ */
 .about-jobs li::before {
   content: "";
   display: inline-block;
   width: 22px;
   height: 22px;
-  vertical-align: middle; /* 指定行内元素（inline）或 table-cell 元素的垂直對齊方式 */
+  /* vertical-align: middle; 指定行内元素（inline）或 table-cell 元素的垂直對齊方式 */
   background-color: #891818;
   border-radius: 50%;
   margin-right: 16px;
@@ -180,7 +178,7 @@ img {
   padding-top: 56px;
 }
 
-/* TODO: works-list 藉由 48+8 總共推 56，這樣寫法好嗎？或是可以怎樣改進呢（要符合推擠方向一致的話） */
+/* works-list 藉由 48+8 總共推 56 */
 .works-list {
   display: flex;
   flex-wrap: wrap;
